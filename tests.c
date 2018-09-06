@@ -61,11 +61,6 @@ static char * testInitialize() {
 	return 0;
 }
 
-static char * testLoadGame() {
-	loadGame("PONG");
-	return 0;
-}
-
 // 00E0 Display - disp_clear: Clears the screen
 static char * test00E0() {
     for(int i = 0; i < NUM_OF_PIXELS; i++) {
@@ -623,24 +618,24 @@ static char * testFX65() {
 }
 
 static char * all_tests() {
-	mu_run_test(testInitialize);
+    mu_run_test(testInitialize);
 
-	// Instructions
-	mu_run_test(test00E0);
-	mu_run_test(test00EE);
-	mu_run_test(test1NNN);
-	mu_run_test(test2NNN);
-	mu_run_test(test3XNN);
-	mu_run_test(test4XNN);
-	mu_run_test(test5XY0);
-	mu_run_test(test6XNN);
-	mu_run_test(test7XNN);
-	mu_run_test(test8XY0);
-	mu_run_test(test8XY1);
-	mu_run_test(test8XY2);
-	mu_run_test(test8XY3);
-	mu_run_test(test8XY4);
-	mu_run_test(test8XY5);
+    // Instructions
+    mu_run_test(test00E0);
+    mu_run_test(test00EE);
+    mu_run_test(test1NNN);
+    mu_run_test(test2NNN);
+    mu_run_test(test3XNN);
+    mu_run_test(test4XNN);
+    mu_run_test(test5XY0);
+    mu_run_test(test6XNN);
+    mu_run_test(test7XNN);
+    mu_run_test(test8XY0);
+    mu_run_test(test8XY1);
+    mu_run_test(test8XY2);
+    mu_run_test(test8XY3);
+    mu_run_test(test8XY4);
+    mu_run_test(test8XY5);
     mu_run_test(test8XY6);
     mu_run_test(test8XY7);
     mu_run_test(test8XYE);
@@ -657,7 +652,7 @@ static char * all_tests() {
     mu_run_test(testFX18);
     mu_run_test(testFX1E);
 
-	return 0;
+    return 0;
 }
 
 // Run tests
